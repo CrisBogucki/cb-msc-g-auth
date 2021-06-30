@@ -22,9 +22,15 @@ Update and generate models
   \./generate.sh -m g-auth -t cs
 ```
 
-Git
+### Git
 Add submodules
 ```bash
   git submodule add https://github.com/CrisBogucki/cb-msc-smp-lib.git lib/smp-lib
   \git submodule add https://github.com/CrisBogucki/cb-msc-bcr-lib.git lib/bcr-lib
+```
+
+Update submodules from remote
+
+```bash
+  git submodule update --remote
 ```
