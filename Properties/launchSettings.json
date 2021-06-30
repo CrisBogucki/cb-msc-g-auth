@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "cb_msc_g_auth": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
