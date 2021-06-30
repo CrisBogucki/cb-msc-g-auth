@@ -1,5 +1,8 @@
 using System;
 using System.Threading.Tasks;
+using BaseAsyncServices;
+using BaseAsyncServices.Method;
+using CBMscGAuth.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -22,8 +25,8 @@ namespace CBMscGAuth
                     services.AddHostedService<LogoutService>();
                     services.Configure<ConsoleLifetimeOptions>(options => options.SuppressStatusMessages = true);
                 });
-            Console.WriteLine($"info: Service    : {Tools.GetAppSettingsValueString("ServiceConf", "Name")} v.{Tools.GetVersionString()}");
-            Console.WriteLine($"info: Exchange   : {Tools.GetAppSettingsValueString("Rabbit", "Exchange")}");
+            Console.WriteLine($"info: Service    : {Tools.GetAppSettingsValueString("service-conf", "name")} v.{Tools.GetVersionString()}");
+            Console.WriteLine($"info: Exchange   : {Tools.GetAppSettingsValueString("rabbit", "exchange")}");
             Console.WriteLine($"info: ---------------------------------------------");
 
             return host;
