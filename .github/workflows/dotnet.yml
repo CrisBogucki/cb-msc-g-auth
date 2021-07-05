@@ -13,7 +13,11 @@ jobs:
 
     steps:       
     - name: Checkout repository
-      run: git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git
+      uses: actions/checkout@v2
+    - name: Checkout submodules
+      uses: textbook/git-checkout-submodule-action@master
+      with:
+        remote: true
     
     - name: goto cb-msc-g-auth
       run: cd cb-msc-g-auth
