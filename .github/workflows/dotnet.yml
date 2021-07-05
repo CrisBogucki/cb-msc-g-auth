@@ -15,9 +15,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
     - name: Checkout submodules
-      uses: textbook/git-checkout-submodule-action@master
-      with:
-        remote: true
+      run: cd cb-msc-g-auth
+           \git submodule update --remote
     - name: goto cb-msc-g-auth
       run: cd cb-msc-g-auth
     - name: goto lib/smp-lib/
