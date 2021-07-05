@@ -6,9 +6,6 @@ on:
   pull_request:
     branches: [ master ]
 
-variables:
-  WORKSPACE: sasa
-
 jobs:
   build:
     runs-on: ubuntu-latest
