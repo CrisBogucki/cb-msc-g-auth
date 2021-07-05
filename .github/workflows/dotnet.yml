@@ -16,10 +16,11 @@ jobs:
       run: |
         set | grep TERM
         git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git
-        \cd cb-msc-g-auth 
-        \git submodule update --remote 
-        \cd lib/smp-lib/ 
-        \sudo ./generate.sh -m g-auth -t cs
+        cd cb-msc-g-auth 
+        git submodule update --remote 
+        cd lib/smp-lib/ 
+        ls
+        sudo ./generate.sh -m g-auth -t cs
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
