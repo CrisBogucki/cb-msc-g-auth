@@ -19,9 +19,9 @@ jobs:
     - name: goto lib/smp-lib/
       run: cd lib/smp-lib/
     - name: Chmod
-      run: sudo chmod 777 ./generate.sh
+      run: sudo chmod 777 ./lib/smp-lib/generate.sh
     - name: Build models
-      run: ./generate.sh -m g-auth -t cs
+      run: ./lib/smp-lib/generate.sh -m g-auth -t cs
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
