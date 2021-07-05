@@ -14,10 +14,8 @@ jobs:
     steps:       
     - name: Checkout repository with submodules
       run: git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git
-    - name: cd cb-msc-g-auth
-      run: cd cb-msc-g-auth
-    - name: git submodule update --remote
-      run: git submodule update --remote
+    - name: ./cb-msc-g-auth git submodule update --remote
+      run: ./cb-msc-g-auth git submodule update --remote
     - name: cd lib/smp-lib/
       run: cd lib/smp-lib/
     - name: sudo chmod 777 ./generate.sh
