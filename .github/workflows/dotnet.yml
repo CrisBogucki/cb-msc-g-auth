@@ -12,13 +12,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:       
-    - name: Checkout repository and build models
+    - name: Checkout repository
       run: git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git
-          \cd cb-msc-g-auth
-          \git submodule update --remote
-          \cd lib/smp-lib/
-          \sudo chmod 777 ./generate.sh
-          \./generate.sh -m g-auth -t cs
+    
+    - name: goto cb-msc-g-auth
+      run: cd cb-msc-g-auth
+      
+    - name: Checkout submodule
+      run: git submodule update --remote
+      
+    - name: goto lib/smp-lib/
+      run: cd lib/smp-lib/
+      
+    - name: Chmod
+      run: sudo chmod 777 ./generate.sh
+      
+    - name: Build models
+      run: ./generate.sh -m g-auth -t cs
     
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
