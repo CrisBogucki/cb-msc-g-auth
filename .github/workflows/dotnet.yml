@@ -18,22 +18,14 @@ jobs:
       uses: textbook/git-checkout-submodule-action@master
       with:
         remote: true
-    
     - name: goto cb-msc-g-auth
       run: cd cb-msc-g-auth
-      
-    - name: Checkout submodule
-      run: git submodule update --remote
-      
     - name: goto lib/smp-lib/
       run: cd lib/smp-lib/
-      
     - name: Chmod
       run: sudo chmod 777 ./generate.sh
-      
     - name: Build models
       run: ./generate.sh -m g-auth -t cs
-    
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
