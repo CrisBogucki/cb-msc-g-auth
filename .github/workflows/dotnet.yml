@@ -14,8 +14,8 @@ jobs:
     steps:     
     - name: Instalation QuickType
       run: |
-        export PATH="$PATH":/foo/brett/bin:/home/foo/.nvm/versions/node/v11.6.0/bin
         npm install -g quicktype
+        export PATH="$PATH":/foo/brett/bin:/home/foo/.nvm/versions/node/v11.6.0/bin
     - name: Checkout repository with submodules
       run: |
         git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git
