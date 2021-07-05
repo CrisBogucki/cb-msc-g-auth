@@ -21,7 +21,7 @@ jobs:
         npm install -g quicktype
     - name: Checkout repository with submodules and generate models
       run: |
-        git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git
+        git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git 
         cd cb-msc-g-auth 
         git submodule update --remote 
         cd lib/smp-lib/ 
@@ -33,10 +33,16 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: |
+        cd cb-msc-g-auth
+        dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: | 
+        cd cb-msc-g-auth
+        dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: | 
+        cd cb-msc-g-auth
+        dotnet test --no-build --verbosity normal
       
       
