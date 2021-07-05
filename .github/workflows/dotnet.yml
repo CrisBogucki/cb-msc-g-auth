@@ -14,7 +14,6 @@ jobs:
     steps:     
     - name: Instalation QuickType
       run: |
-        apt install npm
         export PATH="$PATH":/foo/brett/bin:/home/foo/.nvm/versions/node/v11.6.0/bin
         npm install -g quicktype
     - name: Checkout repository with submodules
