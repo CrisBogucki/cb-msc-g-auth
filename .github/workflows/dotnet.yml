@@ -27,6 +27,7 @@ jobs:
         cd lib/smp-lib/ 
         export TERM=xterm
         ./generate.sh -m g-auth -t cs
+        echo "Done"
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
