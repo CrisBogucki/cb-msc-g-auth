@@ -18,11 +18,8 @@ namespace CBMscGAuth.Services
 
         protected override async Task<TResponse> ConsumerHandleAsync(LoginQuery request)
         {
-            Logger.LogInformation("Poprawne wysołania usługi login");
             var payload = new TokenDto {Token = "moj_tajny_token", RefreshToken = "moj_tajny_refresh_token"};
             return await Task.FromResult(payload);
         }
-
-        
     }
 }
