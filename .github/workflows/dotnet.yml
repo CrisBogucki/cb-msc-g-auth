@@ -14,9 +14,10 @@ jobs:
     steps:       
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Checkout submodules
+    - name: Checkout submodules1
       run: cd cb-msc-g-auth
-           \git submodule update --remote
+    - name: Checkout submodules2
+      run: git submodule update --remote
     - name: goto cb-msc-g-auth
       run: cd cb-msc-g-auth
     - name: goto lib/smp-lib/
