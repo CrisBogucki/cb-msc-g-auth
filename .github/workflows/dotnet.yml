@@ -18,7 +18,8 @@ jobs:
       run: git submodule update --remote
     - name: Checkout submodules1
       run: cd ./lib/smp-lib
-            \./generate.sh -m g-auth -t cs
+    - name: Checkout submodules1
+      run: ./generate.sh -m g-auth -t cs
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
