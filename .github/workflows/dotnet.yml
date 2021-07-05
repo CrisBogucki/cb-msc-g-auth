@@ -16,8 +16,6 @@ jobs:
       uses: actions/checkout@v2
     - name: Checkout submodules
       run: git submodule update --remote
-    - name: goto cb-msc-g-auth
-      run: cd cb-msc-g-auth
     - name: goto lib/smp-lib/
       run: cd lib/smp-lib/
     - name: Chmod
