@@ -21,7 +21,7 @@ jobs:
         git submodule update --remote 
         cd lib/smp-lib/ 
         ls
-        ./generate.sh -m g-auth -t cs
+        sudo ./generate.sh -m g-auth -t cs
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
