@@ -17,7 +17,7 @@ jobs:
     - name: Checkout submodules
       run: git submodule update --remote
     - name: Build models
-      run: ./lib/smp-lib/generate.sh -m g-auth -t cs
+      run: ls ./lib/smp-lib/
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
