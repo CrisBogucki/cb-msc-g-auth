@@ -15,6 +15,7 @@ jobs:
     - name: Checkout repository with submodules
       run: |
         set | grep TERM
+        echo "export TERM=dumb" >> ~/.bashrc
         git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git
         cd cb-msc-g-auth 
         git submodule update --remote 
