@@ -12,12 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:       
-    - name: Checkout repository
-      uses: actions/checkout@v2
-    - name: Checkout submodules
-      run: git submodule update --remote
-    - name: Checkout submodules1
-      run: lib/smp-lib/generate.sh -m g-auth -t cs
+    - name: Checkout repository with submodules
+      run: git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
