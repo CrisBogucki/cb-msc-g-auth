@@ -15,7 +15,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
     - name: Checkout submodules
-      run: git submodule update --remote; ./lib/smp-lib/generate.sh -m g-auth -t cs
+      run: git submodule update --remote
+    - name: Checkout submodules1
+      run: ls #./lib/smp-lib/generate.sh -m g-auth -t cs
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
