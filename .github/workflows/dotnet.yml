@@ -18,6 +18,7 @@ jobs:
         cd cb-msc-g-auth 
         git submodule update --remote 
         cd lib/smp-lib/ 
+        export TERM=xterm
         ./generate.sh -m g-auth -t cs
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
