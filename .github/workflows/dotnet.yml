@@ -14,9 +14,7 @@ jobs:
     steps:       
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Checkout submodules1
-      run: cd cb-msc-g-auth
-    - name: Checkout submodules2
+    - name: Checkout submodules
       run: git submodule update --remote
     - name: goto cb-msc-g-auth
       run: cd cb-msc-g-auth
