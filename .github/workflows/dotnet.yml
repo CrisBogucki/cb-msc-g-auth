@@ -17,7 +17,7 @@ jobs:
     - name: Checkout submodules
       run: git submodule update --remote
     - name: Checkout submodules1
-      run: cd ./lib/smp-lib
+      run: ls ./lib/smp-lib
     - name: Checkout submodules1
       run: ./generate.sh -m g-auth -t cs
     - name: Setup .NET
