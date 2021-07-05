@@ -15,9 +15,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
     - name: Checkout submodules
-      run: git submodule update --remote
-    - name: Build models
-      run: lib/smp-lib/generate.sh -m g-auth -t cs
+      run: git submodule update --remote; ./lib/smp-lib/generate.sh -m g-auth -t cs
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
@@ -28,3 +26,5 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      
+      
