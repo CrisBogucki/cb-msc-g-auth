@@ -13,8 +13,6 @@ jobs:
     steps:       
     - name: Setup Node.js
       uses: actions/setup-node@v2
-      with:
-        node-version: '14'
     - name: Instalation quicktype
       run: npm install -g quicktype
     - name: Instalation heroku
