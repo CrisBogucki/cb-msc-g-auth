@@ -15,9 +15,10 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '14'
-    - name: Instalation QuickType
-      run: |
-        npm install -g quicktype
+    - name: Instalation quicktype
+      run: npm install -g quicktype
+    - name: Instalation heroku
+      run: install -g heroku
     - name: Checkout repository with submodules and generate models
       run: | 
         git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git 
