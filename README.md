@@ -32,3 +32,10 @@ Update submodules from remote
 ```bash
   git submodule update --remote
 ```
+
+Remove submodules from remote
+
+```bash
+  git rm --cached lib/smp-lib
+  \git rm --cached lib/bcr-lib
+```
