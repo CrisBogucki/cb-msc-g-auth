@@ -2,4 +2,5 @@ cd ..
 # update submodules
 git submodule update --remote
 # build models for modules dependency
-./lib/smp-lib/modules.sh
+cd lib/smp-lib
+./modules.sh
