@@ -9,6 +9,7 @@ Download and setup complete script
 ```bash
   git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git
   \cd cb-msc-g-auth
+  \git submodule update --remote
   \./scripts/update.sh
 ```
 
