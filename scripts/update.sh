@@ -1,3 +1,4 @@
+cd ..
 # update submodules
 git submodule update --remote
 # build models for modules dependency
