@@ -39,3 +39,9 @@ Remove submodules from remote
   git rm --cached lib/smp-lib
   \git rm --cached lib/bcr-lib
 ```
+
+Update lib from remote
+
+```bash
+git pull origin main
+```
