@@ -18,7 +18,7 @@ jobs:
     - name: Instalation quicktype
       run: npm install -g quicktype
     - name: Instalation heroku
-      run: install -g heroku
+      run: npm install -g heroku
     - name: Checkout repository with submodules and generate models
       run: | 
         git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git 
