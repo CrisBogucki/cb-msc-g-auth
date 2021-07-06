@@ -20,13 +20,12 @@ jobs:
         npm install -g quicktype
     - name: Checkout repository with submodules and generate models
       run: |
+        export TERM=xterm
         git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git 
         cd cb-msc-g-auth 
         git submodule update --remote 
         cd lib/smp-lib/ 
-        export TERM=xterm
         ./generate.sh -m g-auth -t cs
-        echo "Done"
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
