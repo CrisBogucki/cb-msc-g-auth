@@ -8,7 +8,7 @@ Globaly User Authentication Microservice in .net core
 Download and setup complete script
 ```bash
   git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git
-  \./script/update.sh
+  \./cb-msc-g-auth/script/update.sh
 ```
 
 Update and generate models
