@@ -15,13 +15,27 @@ PRINT_BANNER() {
 }
 
 UPDATE_LIBS() {
-echo 'updating libs .....................................'  
-git submodule update --remote
-echo 'updating libs ................................ done'  
+  for lib in bcr-lib smp-lib 
+  do
+    UPDATE_LIB $lib
+  done
 }
 
+GENERATE_MODELS() {
+  cd lib/smp-lib
+  ./modules.sh
+  cd ../..
+}
 
+UPDATE_LIB() {
+  cd lib/$1
+  echo "Updating $1 ....................."
+  git submodule update --remote --init
+  git submodule foreach git pull
+  echo "Updating $1 ................ done"
+  cd ../..
+}
 
-clear
 PRINT_BANNER
 UPDATE_LIBS
+GENERATE_MODELS
