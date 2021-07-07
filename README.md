@@ -1,8 +1,6 @@
 # cb-msc-g-auth
 Globaly User Authentication Microservice in .net core
 
-
-
 ### Download and setup
 
 Download and setup complete script
@@ -16,8 +14,7 @@ Download and setup complete script
 
 Update and generate models
 ```bash
-  cd ./scripts
-  \./scripts/update.sh
+  ./update.sh
 ```
 
 ### Git
