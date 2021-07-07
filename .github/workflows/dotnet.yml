@@ -20,11 +20,9 @@ jobs:
     - name: Checkout repository with submodules and generate models
       run: |
         git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git
-        cd cb-msc-g-auth
-        git submodule update --remote
-        cd lib/smp-lib
         export TERM=xterm
-        ./modules.sh
+        cd cb-msc-g-auth
+        ./update.sh
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
