@@ -30,8 +30,8 @@ GENERATE_MODELS() {
 UPDATE_LIB() {
   cd lib/$1
   echo "Updating $1 ....................."
+  git submodule foreach git pull origin main
   git submodule update --remote --init
-  git submodule foreach git pull
   echo "Updating $1 ................ done"
   cd ../..
 }
