@@ -14,7 +14,9 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
     - name: Instalation quicktype
-      run: npm install -g quicktype
+      run: |
+        sudo chown -R $USER /usr/local/lib/node_modules
+        npm install -g quicktype
     - name: Instalation heroku
       run: npm install -g heroku
     - name: Checkout repository with submodules and generate models
