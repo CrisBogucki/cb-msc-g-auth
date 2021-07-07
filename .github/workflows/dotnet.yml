@@ -22,7 +22,7 @@ jobs:
         git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git
         cd cb-msc-g-auth
         export TERM=xterm
-        ./update.sh
+        sudo ./update.sh
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
