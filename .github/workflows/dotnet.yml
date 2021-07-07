@@ -13,20 +13,18 @@ jobs:
     steps:       
     - name: Setup Node.js
       uses: actions/setup-node@v2
-      with:
-        node-version: '14'
     - name: Instalation quicktype
       run: npm install -g quicktype
     - name: Instalation heroku
       run: npm install -g heroku
     - name: Checkout repository with submodules and generate models
       run: |
-        git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git 
-        \cd cb-msc-g-auth 
-        \git submodule update --remote 
-        \cd lib/smp-lib/
+        git clone --recurse-submodules https://github.com/CrisBogucki/cb-msc-g-auth.git
+        cd cb-msc-g-auth
+        git submodule update --remote
+        cd lib/smp-lib
         export TERM=xterm
-        \./generate.sh -m g-auth -t cs
+        ./modules.sh
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
