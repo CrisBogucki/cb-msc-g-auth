@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using BaseAsyncServices.ServiceBase;
+using Messages.gAuth;
 using Microsoft.Extensions.Logging;
-using Types.gAuth;
 
-namespace CBMscGAuth.Services
+namespace CBMscGAuth
 {
     [BaseAsyncServices.Attribute.Service("logout", "Usługa zamykająca sesję użytkownika")]
     public class LogoutService : BaseAsyncService<LogoutCommand>
