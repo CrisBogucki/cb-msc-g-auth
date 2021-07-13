@@ -25,12 +25,10 @@ namespace CBMscGAuth
                     services.AddTransient<IAuthService, AuthLdap>();
                     
                     services.AddTransient<IBaseAsyncProducer, BaseAsyncProducer>();
-                    
+
                     services.AddHostedService<LoginService>();
                     services.AddHostedService<LogoutService>();
-                    services.AddHostedService<RefreshService>();
-                    
-                    
+
                     services.Configure<ConsoleLifetimeOptions>(options => options.SuppressStatusMessages = true);
                 });
             

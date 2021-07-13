@@ -14,13 +14,13 @@ namespace CBMscGAuth
     [BaseAsyncServices.Attribute.Service("login", "Usługa do autentykacji użytkownika")]
     public class LoginService : BaseAsyncService<LoginQuery, TokenDto>
     {
-        private readonly ILogger<BaseAsyncService<LoginQuery, TokenDto>> _logger;
-        private readonly ServiceProvider _services;
+        private readonly ILogger<LoginService> _logger;
+        private readonly IServiceProvider _services;
 
-        public LoginService(ILogger<LoginService> logger, IServiceCollection services) : base(logger)
+        public LoginService(ILogger<LoginService> logger, IServiceProvider serviceProvider) : base(logger)
         {
             _logger = logger;
-            _services = services.BuildServiceProvider();
+            _services = serviceProvider;
         }
 
         protected override async Task<TResponse> ConsumerHandleAsync(LoginQuery request)
